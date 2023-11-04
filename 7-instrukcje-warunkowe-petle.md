@@ -65,11 +65,11 @@ Liczba jest nieparzysta
 
 ```python
 for port in range(1, 51):  # Przechodzenie przez listę portów od 1 do 50
-    if port % 2 == 0:  # Jeśli numer portu jest parzysty
-        print(f"Port {port} jest zamknięty.")
-    elif port == 22:  # Jeśli port to 22
+    if port == 22:  # Jeśli port to 22
         print("Bezpieczny port SSH znaleziony, kontynuuję skanowanie...")
         continue
+    elif port % 2 == 0:  # Jeśli numer portu jest parzysty
+        print(f"Port {port} jest zamknięty.")
     else:  # Jeśli numer portu jest nieparzysty
         print(f"Port {port} jest otwarty.")
     
